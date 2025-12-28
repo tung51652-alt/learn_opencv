@@ -15,10 +15,7 @@ c2 = cv.Canny(blur, 125, 175)
 # dilated = cv.dilate(c2, (7,7), iterations=3)
 # cv.imshow('Dilated', dilated)
 
-# eroding = cv.erode(c2, (7,7), iterations= 3 )
-# cv.imshow('erode', eroding)
+eroding = cv.erode(c2, (7,7), iterations= 3)
+cv.imshow('erode', eroding)
 
-#cut img
-c = img[50:,10:200]
-cv.imshow('cut',c)
 cv.waitKey(0)

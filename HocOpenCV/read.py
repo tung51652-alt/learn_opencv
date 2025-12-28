@@ -1,18 +1,28 @@
 import cv2 as cv
 
-# vd = cv.VideoCapture('video/song.mp4')
+# img = cv.imread('photos/son.jpg')
+# cv.imshow('goku', img)
+# print("hiện ảnh thành công")
+# print(img)
+# print(img.shape)
+# #unit8 = unsigned int 2^8
 
-# while True:
-#     isTrue, frame = vd.read()
+# cv.waitKey(0)
 
-#     cv.imshow('video', frame)
+path  = 'video/song.mp4'
+vd = cv.VideoCapture(path)
+# cv.VideoCapture(0)
+while True:
+    isTrue, frame = vd.read()
 
-#     if cv.waitKey(20) & 0xFF == ord('d'): # bấm 'd' để tắt video
-#         break
+    if(not isTrue):
+        break
 
-# vd.release()
-# cv.destroyAllWindows()
+    cv.imshow('video', frame)
 
-img = cv.imread('photos/son.jpg')
-cv.imshow('goku', img)
-cv.waitKey(0)
+    if cv.waitKey(20) == ord('d'): # bấm 'd' để tắt video
+        break
+
+vd.release()
+cv.destroyAllWindows()
+

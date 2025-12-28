@@ -3,11 +3,15 @@ import numpy as np
 
 # tạo ra một ma trận kích cỡ 500 pixel x 500 pixel, và có 3 chiều màu sắc 
 blank  = np.zeros((500,500,3), dtype = 'uint8')
+# print(blank)
+# cv.imshow('blank1', blank)
+
 # khổng gian 3 chiều này là dài, rộng và màu sắc 
 # kiểu dữ liệu ở đâu là unsign int (số nguyên ko âm) và biểu diễn ở dạng 8 bit 
-# blank[200:300, 100 : 200] = 0, 100, 100
+blank[:] = 0, 150, 100
+# blank[100:200, 100 : 200] = 0, 100, 100
 # blank[200:300] = 0, 100, 200
-# cv.imshow('blank', blank)
+cv.imshow('blank2', blank)
 #print(blank)
 # vẽ hình chữ nhật
 # Vẽ hình chữ nhật viền xanh lá
@@ -26,8 +30,8 @@ blank  = np.zeros((500,500,3), dtype = 'uint8')
 # cv.line(blank, (0,0), (blank.shape[1]//2, blank.shape[0]//2), (255,255,255), thickness=3)
 
 
-cv.putText(blank, 'Hello', (225,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2)
-cv.imshow('blank', blank)
+# cv.putText(blank, 'Hello', (225,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2)
+# cv.imshow('blank', blank)
 
 
 
