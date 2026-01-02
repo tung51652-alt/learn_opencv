@@ -13,7 +13,7 @@ while True:
         break
     
     path = f'frames_folder/frame_{current_frame}.jpg'
-    if( current_frame % 30 == 0):
+    if(current_frame % 30 == 0):
         cv.imwrite(path, frame)
         print(f'Da luu: {path}')
 

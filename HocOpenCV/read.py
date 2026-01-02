@@ -1,13 +1,11 @@
 import cv2 as cv
 
-# img = cv.imread('photos/son.jpg')
-# cv.imshow('goku', img)
-# print("hiện ảnh thành công")
-# print(img)
+# img = cv.imread('photos/ca.jpg', 0)
+# cv.imshow('ca', img)
 # print(img.shape)
-# #unit8 = unsigned int 2^8
-
 # cv.waitKey(0)
+
+#uint8 = unsigned int 2^8
 
 path  = 'video/song.mp4'
 vd = cv.VideoCapture(path)
@@ -19,8 +17,8 @@ while True:
         break
 
     cv.imshow('video', frame)
-
-    if cv.waitKey(20) == ord('d'): # bấm 'd' để tắt video
+    
+    if cv.waitKey(1) == ord('d'): # bấm 'd' để tắt video
         break
 
 vd.release()
